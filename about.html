@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Bar Pipal</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8f2; /* warm background */
+    color: #3E2417; /* warm brown text */
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  header .logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #5A3825; 
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #C97B3C;
+  }
+
+  /* About section */
+  .about-section {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  /* Top About Us banner */
+  .about-banner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .about-banner img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+  }
+
+  .about-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff5e6;
+    font-size: 2rem; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  }
+
+  /* Overlapping Our Story */
+  .story-section {
+    position: relative;
+    width: 75%; 
+    margin: -50px auto 0 auto; /* small overlap */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .story-section img {
+    width: 100%;
+    height: 200px; /* taller so fully visible */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Overlay to make text visible */
+  .story-text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    background: rgba(0,0,0,0.4); /* semi-transparent dark overlay */
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff; /* text color white for visibility */
+  }
+
+  .story-text h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 8px;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .story-section {
+      width: 95%;
+      margin-top: -30px;
+    }
+
+    .story-text {
+      position: static;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      text-align: center;
+      margin: -60px auto 20px auto;
+      padding: 15px;
+    }
+
+    .about-banner h1 {
+      font-size: 1.6rem;
+    }
+
+    .about-banner img {
+      height: 200px;
+    }
+
+    .story-section img {
+      height: 150px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Bar Pipal Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="about-section">
+  <!-- Big About Us image -->
+  <div class="about-banner">
+    <img src="images/chair.webp" alt="About Us">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- Overlapping Our Story image -->
+  <div class="story-section">
+    <img src="images/dark.webp" alt="Our Story">
+    <div class="story-text">
+      <h2>Our Story</h2>
+      <p>
+       Bar Pipal was born from the vision of its owner, Pradip Khanal, a 33-year-old with a remarkable blend of skills and passions. Beyond running the lodge and restaurant, Pradip is also an electrician and a trusted hand in computer and electronics repair—someone who thrives on solving problems and bringing ideas to life. His journey reflects the spirit of hard work and versatility: from wiring homes to fixing gadgets, and now to creating a welcoming riverside space where people can gather, celebrate, and feel at home. Bar Pipal is more than a business; it's a reflection of Pradip's dedication to community, authenticity, and the joy of building something meaningful with his own hands.
+
+     </p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
