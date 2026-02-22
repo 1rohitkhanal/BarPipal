@@ -664,5 +664,149 @@ body {
     .footer-column h3::after { left: 50%; transform: translateX(-50%); }
     .footer-socials { justify-content: center; }
 }
+/* --- Elegant Dark Footer --- */
+.site-footer {
+    background-color: #0f0f0f; /* Pure dark theme */
+    color: #ffffff;
+    padding: 80px 20px 30px;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
 
+/* Glowing Accent Line at Top */
+.footer-line-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4CAF50, #ffd700, #4CAF50, transparent);
+}
 
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+/* Header Styling */
+.footer-column h3 {
+    color: #4CAF50; /* Green accents */
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Gold Accent Underline */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 2px;
+    background-color: #ffd700; /* Gold line */
+}
+
+.footer-logo {
+    font-size: 2rem !important;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+    background: -webkit-linear-gradient(#fff, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #bbbbbb;
+}
+
+/* Links with Hover Effect */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #bbbbbb;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links li a:hover {
+    color: #ffd700;
+    transform: translateX(10px); /* Moves slightly right on hover */
+}
+
+/* Social Icon Boxes */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-socials a:hover {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Footer Bottom Credit */
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.footer-line-bottom {
+    width: 100px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.dev-credit a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Responsive vertical divider removal */
+@media (max-width: 768px) {
+    .footer-container { text-align: center; }
+    .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-socials { justify-content: center; }
+}
