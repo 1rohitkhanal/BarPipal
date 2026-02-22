@@ -533,5 +533,136 @@ body {
   background-color: #267e26;
 }
 
+.site-footer {
+    background-color: #1a1a1a; /* Deep Black/Charcoal */
+    color: #e0e0e0;
+    padding: 70px 20px 30px;
+    font-family: 'Segoe UI', sans-serif;
+    /* Attractive Top Line (Gradient from Green to Gold) */
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to right, #4CAF50, #ffd700, #4CAF50);
+    border-image-slice: 1;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+/* Decorative Vertical Lines for Desktop */
+@media (min-width: 992px) {
+    .footer-column:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 20px;
+    }
+}
+
+.footer-column h3 {
+    color: #4CAF50; /* Fresh Green Title */
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Underline for each header */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #ffd700; /* Gold accent line */
+}
+
+.footer-logo {
+    font-size: 1.8rem !important;
+    font-weight: bold;
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffd700; /* Gold on hover */
+    padding-left: 8px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Square with slight roundness */
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+}
+
+.footer-socials a:hover {
+    background: #4CAF50;
+    color: #1a1a1a;
+    transform: rotate(360deg); /* Playful spin */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.developer-tag a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.developer-tag a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-container { text-align: center; }
+    .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-socials { justify-content: center; }
+}
 
 
